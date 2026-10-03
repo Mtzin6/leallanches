@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111111"><title>Leal Lanches | Faça seu pedido</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar">PEDIDOS PELO WHATSAPP <span>•</span> ATENDIMENTO RÁPIDO</div>
+<header class="header">
+  <a class="brand" href="#inicio" aria-label="Leal Lanches"><img class="brand-logo" src="logo-leal-lanches.png" alt="Leal Lanches"></a>
+  <nav aria-label="Navegação principal"><a href="#cardapio">Cardápio</a><a href="#destaques">Destaques</a><a href="#sobre">Sobre</a></nav>
+  <button class="cart-button" id="openCart" type="button" aria-label="Abrir carrinho"><span class="cart-icon">🛒</span><span>Meu pedido</span><i id="cartCount">0</i></button>
+</header>
+<main id="inicio">
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">LEAL LANCHES</span>
+    <h1>Seu lanche,<br><em>do seu jeito.</em></h1>
+    <p>Escolha seus favoritos, monte o pedido e envie tudo pelo WhatsApp. Simples, rápido e sem complicação.</p>
+    <div class="hero-actions"><a class="btn primary" href="#cardapio">Ver cardápio</a><a class="btn ghost" href="#destaques">Ver destaques</a></div>
+    <div class="trust"><span>✓</span><div><b>Pedido fácil</b><small>Você escolhe, confere e envia.</small></div></div>
+  </div>
+  <div class="hero-brand"><div class="hero-brand-frame"><img src="logo-leal-lanches.png" alt="Leal Lanches"></div></div>
+</section>
+<section class="strip" id="destaques">
+  <div><span>01</span><div><b>Escolha</b><small>Veja o cardápio e adicione seus lanches.</small></div></div>
+  <div><span>02</span><div><b>Confira</b><small>Revise quantidades e o total no carrinho.</small></div></div>
+  <div><span>03</span><div><b>Peça</b><small>Informe o endereço e envie pelo WhatsApp.</small></div></div>
+</section>
+<section class="section" id="cardapio">
+  <div class="section-head"><div><span class="eyebrow">CARDÁPIO</span><h2>Escolha seu <em>favorito</em></h2></div><p>Adicione quantos itens quiser.</p></div>
+  <div class="categories" id="categories"></div><div class="products" id="products"></div>
+</section>
+<section class="about" id="sobre"><div class="about-logo"><img src="logo-leal-lanches.png" alt="Leal Lanches"></div><div><span class="eyebrow">LEAL LANCHES</span><h2>Feito para pedir fácil.</h2><p>Um cardápio direto ao ponto: você escolhe os produtos, confere o pedido e envia pelo WhatsApp com seus dados de entrega.</p></div></section>
+</main>
+<footer><a class="admin-access" href="admin.html" title="Acesso administrativo" aria-label="Acesso administrativo"><span aria-hidden="true">⚙</span></a><p>© 2026 Leal Lanches • Feito para pedir fácil.</p></footer>
+<aside class="cart-panel" id="cartPanel" aria-label="Carrinho"><div class="cart-head"><div><span class="eyebrow">SEU PEDIDO</span><h3>Meu carrinho</h3></div><button id="closeCart" type="button" aria-label="Fechar carrinho">×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-bottom"><div class="total"><span>Total</span><b id="cartTotal">R$ 0,00</b></div><button class="btn primary full" id="checkout" type="button">Finalizar compra pelo WhatsApp</button><small>Você informa o endereço antes de abrir o WhatsApp.</small></div></aside>
+<div class="checkout-modal hidden" id="checkoutModal" aria-hidden="true"><div class="checkout-card"><button class="modal-close" id="checkoutClose" type="button" aria-label="Fechar">×</button><span class="eyebrow">FINALIZAR PEDIDO</span><h2>Dados de entrega</h2><p class="checkout-intro">Preencha os dados abaixo. Depois, o WhatsApp abrirá com o pedido e o endereço já preenchidos.</p><div class="checkout-grid"><label>Seu nome<input id="cName" type="text" autocomplete="name" placeholder="Ex.: João Silva"></label><label>Rua / avenida<input id="cStreet" type="text" autocomplete="street-address" placeholder="Ex.: Rua Principal"></label><label>Número<input id="cNumber" type="text" inputmode="numeric" placeholder="Ex.: 12"></label><label>Bairro<input id="cNeighborhood" type="text" autocomplete="address-level3" placeholder="Ex.: Centro"></label><label class="wide">Complemento <span>(opcional)</span><input id="cComplement" type="text" placeholder="Casa, apartamento, bloco..."></label><label class="wide">Ponto de referência<input id="cReference" type="text" placeholder="Próximo à praça, em frente à escola..."></label></div><div class="payment-box"><b>Pagamento</b><strong>Pix</strong><small>O pagamento será combinado pelo WhatsApp antes da confirmação do pedido.</small></div><div class="checkout-summary"><span>Total do pedido</span><b id="checkoutTotal">R$ 0,00</b></div><div id="checkoutError" class="checkout-error" role="alert"></div><button class="btn primary full" id="sendWhatsApp" type="button">Continuar para o WhatsApp</button><small class="checkout-note">Confira os dados, envie a mensagem, faça o Pix conforme a orientação do atendimento e aguarde a confirmação.</small></div></div>
+<div class="overlay" id="overlay"></div><script src="app.js"></script>
+</body></html>
